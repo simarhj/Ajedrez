@@ -1,0 +1,8 @@
+{
+  "/ServletPrueba/*": {
+      "target": "http://localhost:52041",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+  }
+}
