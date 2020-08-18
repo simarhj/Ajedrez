@@ -7,7 +7,7 @@
     </tr>
 
     <tr *ngFor="let fila of filas">
-        <td *ngFor="let celda of fila" class={{celda}}></td>
+        <td *ngFor="let celda of fila" class={{celda.clase}} id={{celda.id}}>&#9812;</td>
     </tr>
     
 </table>

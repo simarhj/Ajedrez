@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Jugador } from '../Jugador';
+import { Celda } from '../Celda';
 
 @Component({
   selector: 'app-tablero',
@@ -26,11 +27,17 @@ export class TableroComponent implements OnInit {
     for(var i=0; i<8; i++){
       this.filas[i] = [];
       for(var j=0; j<8; j++){
+        var celda : Celda ={
+          clase : "",
+          id : ""
+        };
+        celda.id = i+""+j;
         if((i + j) % 2 == 0){
-          this.filas[i][j]= 'posicion2';
+          celda.clase = 'posicion2';
         }else{
-          this.filas[i][j]= 'posicion1';
+          celda.clase = 'posicion1';
         }
+        this.filas[i][j] = celda;
       }
     }
   }
